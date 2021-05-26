@@ -9,7 +9,6 @@
 /* Begin PBXBuildFile section */
 		E828585AE1BEAB10A3E58BD8 /* Pods_ZMAPIManager.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 408B0BCC96C2F8459D474DB1 /* Pods_ZMAPIManager.framework */; };
 		E8C05E40265E296400930ADF /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = E8C05E3F265E296400930ADF /* AppDelegate.swift */; };
-		E8C05E42265E296400930ADF /* SceneDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = E8C05E41265E296400930ADF /* SceneDelegate.swift */; };
 		E8C05E44265E296400930ADF /* ViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = E8C05E43265E296400930ADF /* ViewController.swift */; };
 		E8C05E47265E296400930ADF /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = E8C05E45265E296400930ADF /* Main.storyboard */; };
 		E8C05E49265E296800930ADF /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = E8C05E48265E296800930ADF /* Assets.xcassets */; };
@@ -25,7 +24,6 @@
 		408B0BCC96C2F8459D474DB1 /* Pods_ZMAPIManager.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_ZMAPIManager.framework; sourceTree = BUILT_PRODUCTS_DIR; };
 		E8C05E3C265E296400930ADF /* ZMAPIManager.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = ZMAPIManager.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		E8C05E3F265E296400930ADF /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
-		E8C05E41265E296400930ADF /* SceneDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SceneDelegate.swift; sourceTree = "<group>"; };
 		E8C05E43265E296400930ADF /* ViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ViewController.swift; sourceTree = "<group>"; };
 		E8C05E46265E296400930ADF /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/Main.storyboard; sourceTree = "<group>"; };
 		E8C05E48265E296800930ADF /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
@@ -88,7 +86,6 @@
 			children = (
 				E8C05E53265E2A5400930ADF /* ZMAPIManager */,
 				E8C05E3F265E296400930ADF /* AppDelegate.swift */,
-				E8C05E41265E296400930ADF /* SceneDelegate.swift */,
 				E8C05E43265E296400930ADF /* ViewController.swift */,
 				E8C05E45265E296400930ADF /* Main.storyboard */,
 				E8C05E48265E296800930ADF /* Assets.xcassets */,
@@ -227,7 +224,6 @@
 				E8C05E44265E296400930ADF /* ViewController.swift in Sources */,
 				E8C05E57265E2A8000930ADF /* ZMAPIManager.swift in Sources */,
 				E8C05E40265E296400930ADF /* AppDelegate.swift in Sources */,
-				E8C05E42265E296400930ADF /* SceneDelegate.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -378,6 +374,7 @@
 				CODE_SIGN_STYLE = Automatic;
 				DEVELOPMENT_TEAM = KU7JG9F373;
 				INFOPLIST_FILE = ZMAPIManager/Info.plist;
+				IPHONEOS_DEPLOYMENT_TARGET = 10.0;
 				LD_RUNPATH_SEARCH_PATHS = (
 					"$(inherited)",
 					"@executable_path/Frameworks",
@@ -385,7 +382,7 @@
 				PRODUCT_BUNDLE_IDENTIFIER = com.zlib.apptest.ZMAPIManager;
 				PRODUCT_NAME = "$(TARGET_NAME)";
 				SWIFT_VERSION = 5.0;
-				TARGETED_DEVICE_FAMILY = "1,2";
+				TARGETED_DEVICE_FAMILY = 1;
 			};
 			name = Debug;
 		};
@@ -398,6 +395,7 @@
 				CODE_SIGN_STYLE = Automatic;
 				DEVELOPMENT_TEAM = KU7JG9F373;
 				INFOPLIST_FILE = ZMAPIManager/Info.plist;
+				IPHONEOS_DEPLOYMENT_TARGET = 10.0;
 				LD_RUNPATH_SEARCH_PATHS = (
 					"$(inherited)",
 					"@executable_path/Frameworks",
@@ -405,7 +403,7 @@
 				PRODUCT_BUNDLE_IDENTIFIER = com.zlib.apptest.ZMAPIManager;
 				PRODUCT_NAME = "$(TARGET_NAME)";
 				SWIFT_VERSION = 5.0;
-				TARGETED_DEVICE_FAMILY = "1,2";
+				TARGETED_DEVICE_FAMILY = 1;
 			};
 			name = Release;
 		};
