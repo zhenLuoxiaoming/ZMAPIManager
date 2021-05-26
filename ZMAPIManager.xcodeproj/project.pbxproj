@@ -3,19 +3,26 @@
 	archiveVersion = 1;
 	classes = {
 	};
-	objectVersion = 50;
+	objectVersion = 51;
 	objects = {
 
 /* Begin PBXBuildFile section */
+		E828585AE1BEAB10A3E58BD8 /* Pods_ZMAPIManager.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 408B0BCC96C2F8459D474DB1 /* Pods_ZMAPIManager.framework */; };
 		E8C05E40265E296400930ADF /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = E8C05E3F265E296400930ADF /* AppDelegate.swift */; };
 		E8C05E42265E296400930ADF /* SceneDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = E8C05E41265E296400930ADF /* SceneDelegate.swift */; };
 		E8C05E44265E296400930ADF /* ViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = E8C05E43265E296400930ADF /* ViewController.swift */; };
 		E8C05E47265E296400930ADF /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = E8C05E45265E296400930ADF /* Main.storyboard */; };
 		E8C05E49265E296800930ADF /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = E8C05E48265E296800930ADF /* Assets.xcassets */; };
 		E8C05E4C265E296800930ADF /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = E8C05E4A265E296800930ADF /* LaunchScreen.storyboard */; };
+		E8C05E57265E2A8000930ADF /* ZMAPIManager.swift in Sources */ = {isa = PBXBuildFile; fileRef = E8C05E54265E2A8000930ADF /* ZMAPIManager.swift */; };
+		E8C05E58265E2A8000930ADF /* ZMNetManager.swift in Sources */ = {isa = PBXBuildFile; fileRef = E8C05E55265E2A8000930ADF /* ZMNetManager.swift */; };
+		E8C05E59265E2A8000930ADF /* TestAPI.swift in Sources */ = {isa = PBXBuildFile; fileRef = E8C05E56265E2A8000930ADF /* TestAPI.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
+		38A714ABEF8C29F8CD188230 /* Pods-ZMAPIManager.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-ZMAPIManager.debug.xcconfig"; path = "Target Support Files/Pods-ZMAPIManager/Pods-ZMAPIManager.debug.xcconfig"; sourceTree = "<group>"; };
+		404E890113657C4E20F15A03 /* Pods-ZMAPIManager.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-ZMAPIManager.release.xcconfig"; path = "Target Support Files/Pods-ZMAPIManager/Pods-ZMAPIManager.release.xcconfig"; sourceTree = "<group>"; };
+		408B0BCC96C2F8459D474DB1 /* Pods_ZMAPIManager.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_ZMAPIManager.framework; sourceTree = BUILT_PRODUCTS_DIR; };
 		E8C05E3C265E296400930ADF /* ZMAPIManager.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = ZMAPIManager.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		E8C05E3F265E296400930ADF /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		E8C05E41265E296400930ADF /* SceneDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SceneDelegate.swift; sourceTree = "<group>"; };
@@ -24,6 +31,9 @@
 		E8C05E48265E296800930ADF /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
 		E8C05E4B265E296800930ADF /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/LaunchScreen.storyboard; sourceTree = "<group>"; };
 		E8C05E4D265E296800930ADF /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		E8C05E54265E2A8000930ADF /* ZMAPIManager.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = ZMAPIManager.swift; sourceTree = "<group>"; };
+		E8C05E55265E2A8000930ADF /* ZMNetManager.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = ZMNetManager.swift; sourceTree = "<group>"; };
+		E8C05E56265E2A8000930ADF /* TestAPI.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = TestAPI.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -31,17 +41,37 @@
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				E828585AE1BEAB10A3E58BD8 /* Pods_ZMAPIManager.framework in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
 /* End PBXFrameworksBuildPhase section */
 
 /* Begin PBXGroup section */
+		C54163B2AB87BE512CC8E234 /* Pods */ = {
+			isa = PBXGroup;
+			children = (
+				38A714ABEF8C29F8CD188230 /* Pods-ZMAPIManager.debug.xcconfig */,
+				404E890113657C4E20F15A03 /* Pods-ZMAPIManager.release.xcconfig */,
+			);
+			path = Pods;
+			sourceTree = "<group>";
+		};
+		DDEC565A75AA54AAEAF94B06 /* Frameworks */ = {
+			isa = PBXGroup;
+			children = (
+				408B0BCC96C2F8459D474DB1 /* Pods_ZMAPIManager.framework */,
+			);
+			name = Frameworks;
+			sourceTree = "<group>";
+		};
 		E8C05E33265E296400930ADF = {
 			isa = PBXGroup;
 			children = (
 				E8C05E3E265E296400930ADF /* ZMAPIManager */,
 				E8C05E3D265E296400930ADF /* Products */,
+				C54163B2AB87BE512CC8E234 /* Pods */,
+				DDEC565A75AA54AAEAF94B06 /* Frameworks */,
 			);
 			sourceTree = "<group>";
 		};
@@ -56,6 +86,7 @@
 		E8C05E3E265E296400930ADF /* ZMAPIManager */ = {
 			isa = PBXGroup;
 			children = (
+				E8C05E53265E2A5400930ADF /* ZMAPIManager */,
 				E8C05E3F265E296400930ADF /* AppDelegate.swift */,
 				E8C05E41265E296400930ADF /* SceneDelegate.swift */,
 				E8C05E43265E296400930ADF /* ViewController.swift */,
@@ -67,6 +98,16 @@
 			path = ZMAPIManager;
 			sourceTree = "<group>";
 		};
+		E8C05E53265E2A5400930ADF /* ZMAPIManager */ = {
+			isa = PBXGroup;
+			children = (
+				E8C05E56265E2A8000930ADF /* TestAPI.swift */,
+				E8C05E54265E2A8000930ADF /* ZMAPIManager.swift */,
+				E8C05E55265E2A8000930ADF /* ZMNetManager.swift */,
+			);
+			path = ZMAPIManager;
+			sourceTree = "<group>";
+		};
 /* End PBXGroup section */
 
 /* Begin PBXNativeTarget section */
@@ -74,9 +115,11 @@
 			isa = PBXNativeTarget;
 			buildConfigurationList = E8C05E50265E296800930ADF /* Build configuration list for PBXNativeTarget "ZMAPIManager" */;
 			buildPhases = (
+				A0B0233FEE607112590EDFB9 /* [CP] Check Pods Manifest.lock */,
 				E8C05E38265E296400930ADF /* Sources */,
 				E8C05E39265E296400930ADF /* Frameworks */,
 				E8C05E3A265E296400930ADF /* Resources */,
+				B251559E000DBAA995D87F1F /* [CP] Embed Pods Frameworks */,
 			);
 			buildRules = (
 			);
@@ -132,12 +175,57 @@
 		};
 /* End PBXResourcesBuildPhase section */
 
+/* Begin PBXShellScriptBuildPhase section */
+		A0B0233FEE607112590EDFB9 /* [CP] Check Pods Manifest.lock */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputFileListPaths = (
+			);
+			inputPaths = (
+				"${PODS_PODFILE_DIR_PATH}/Podfile.lock",
+				"${PODS_ROOT}/Manifest.lock",
+			);
+			name = "[CP] Check Pods Manifest.lock";
+			outputFileListPaths = (
+			);
+			outputPaths = (
+				"$(DERIVED_FILE_DIR)/Pods-ZMAPIManager-checkManifestLockResult.txt",
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "diff \"${PODS_PODFILE_DIR_PATH}/Podfile.lock\" \"${PODS_ROOT}/Manifest.lock\" > /dev/null\nif [ $? != 0 ] ; then\n    # print error to STDERR\n    echo \"error: The sandbox is not in sync with the Podfile.lock. Run 'pod install' or update your CocoaPods installation.\" >&2\n    exit 1\nfi\n# This output is used by Xcode 'outputs' to avoid re-running this script phase.\necho \"SUCCESS\" > \"${SCRIPT_OUTPUT_FILE_0}\"\n";
+			showEnvVarsInLog = 0;
+		};
+		B251559E000DBAA995D87F1F /* [CP] Embed Pods Frameworks */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputFileListPaths = (
+				"${PODS_ROOT}/Target Support Files/Pods-ZMAPIManager/Pods-ZMAPIManager-frameworks-${CONFIGURATION}-input-files.xcfilelist",
+			);
+			name = "[CP] Embed Pods Frameworks";
+			outputFileListPaths = (
+				"${PODS_ROOT}/Target Support Files/Pods-ZMAPIManager/Pods-ZMAPIManager-frameworks-${CONFIGURATION}-output-files.xcfilelist",
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "\"${PODS_ROOT}/Target Support Files/Pods-ZMAPIManager/Pods-ZMAPIManager-frameworks.sh\"\n";
+			showEnvVarsInLog = 0;
+		};
+/* End PBXShellScriptBuildPhase section */
+
 /* Begin PBXSourcesBuildPhase section */
 		E8C05E38265E296400930ADF /* Sources */ = {
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				E8C05E59265E2A8000930ADF /* TestAPI.swift in Sources */,
+				E8C05E58265E2A8000930ADF /* ZMNetManager.swift in Sources */,
 				E8C05E44265E296400930ADF /* ViewController.swift in Sources */,
+				E8C05E57265E2A8000930ADF /* ZMAPIManager.swift in Sources */,
 				E8C05E40265E296400930ADF /* AppDelegate.swift in Sources */,
 				E8C05E42265E296400930ADF /* SceneDelegate.swift in Sources */,
 			);
@@ -283,6 +371,7 @@
 		};
 		E8C05E51265E296800930ADF /* Debug */ = {
 			isa = XCBuildConfiguration;
+			baseConfigurationReference = 38A714ABEF8C29F8CD188230 /* Pods-ZMAPIManager.debug.xcconfig */;
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				ASSETCATALOG_COMPILER_GLOBAL_ACCENT_COLOR_NAME = AccentColor;
@@ -302,6 +391,7 @@
 		};
 		E8C05E52265E296800930ADF /* Release */ = {
 			isa = XCBuildConfiguration;
+			baseConfigurationReference = 404E890113657C4E20F15A03 /* Pods-ZMAPIManager.release.xcconfig */;
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				ASSETCATALOG_COMPILER_GLOBAL_ACCENT_COLOR_NAME = AccentColor;
