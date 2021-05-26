@@ -11,7 +11,7 @@ import Alamofire
 import HandyJSON
 import RxSwift
 
-protocol ZMApiProvider{
+public protocol ZMApiProvider{
     /**根路径 Url*/
     func BaseUrl() -> String
     /**请求子路径，请求方式，参数*/
@@ -32,14 +32,14 @@ protocol ZMApiProvider{
     func singleRequest() -> Bool
 }
 
-enum ZMHTTPMethod : String {
+public enum ZMHTTPMethod : String {
     case post = "POST"
     case get = "GET"
     case delete = "DELETE"
     case put = "PUT"
 }
 
-extension ZMApiProvider {
+public extension ZMApiProvider {
     func filterResponseData<T>(resp : ResponseModel<T>) -> ResponseModel<T> {
         return resp
     }
@@ -58,7 +58,7 @@ extension ZMApiProvider {
 }
 
 /// API rx 扩展
-extension ZMApiProvider {
+public extension ZMApiProvider {
     /**rx 请求*/
     func rxRequest<T>(type:T.Type) -> Observable<T> {
         let obable = Observable<T>.create { (obser) -> Disposable in
@@ -79,7 +79,7 @@ extension ZMApiProvider {
 }
 
 // 主体请求方式
-struct ZMAPIManage<T> {
+public struct ZMAPIManage<T> {
     @discardableResult
     func sendReqeust(method : ZMApiProvider , callBack: @escaping resp<T> )  -> DataRequest?  {
         guard let parsed = parseApi(method) else {
@@ -181,7 +181,7 @@ struct ZMAPIManage<T> {
     }
 }
 
-struct ZMAPIParsedModel {
+public struct ZMAPIParsedModel {
     var url : String
     var httpMethod : ZMHTTPMethod
     var param : [String : Any]
@@ -200,7 +200,7 @@ extension Observable {
     }
 }
 
-class RequestCacheManager {
+open class RequestCacheManager {
     static let shard = RequestCacheManager()
     private init(){}
     var requestCache = [String : String]()
@@ -211,7 +211,7 @@ class RequestCacheManager {
     }
 }
 
-protocol ListRequestObjct : NSObjectProtocol {
+public protocol ListRequestObjct : NSObjectProtocol {
     associatedtype T
     var listData : [T] {get set}
     var page : Int {get set}
@@ -221,13 +221,13 @@ protocol ListRequestObjct : NSObjectProtocol {
 }
 
 
-protocol ZMAPIConfig : NSObjectProtocol {
+public protocol ZMAPIConfig : NSObjectProtocol {
     func filterResponseData<T>(api : ZMApiProvider,apiParsedModel : ZMAPIParsedModel, resp : ResponseModel<T>) -> ResponseModel<T>
     
     func filterRequest(api : ZMApiProvider,parsedModel : ZMAPIParsedModel) -> ZMAPIParsedModel
 }
 
-extension ZMAPIConfig {
+public extension ZMAPIConfig {
     func filterResponseData<T>(api : ZMApiProvider, resp : ResponseModel<T>) -> ResponseModel<T> {
         return resp
     }
@@ -238,7 +238,7 @@ extension ZMAPIConfig {
 }
 
 /// config
-class ZMAPIAdapter {
+open class ZMAPIAdapter {
     static let shard = ZMAPIAdapter()
     var delegate : ZMAPIConfig?
     private init(){

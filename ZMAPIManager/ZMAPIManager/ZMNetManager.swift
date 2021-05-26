@@ -12,16 +12,16 @@ import HandyJSON
 import SwiftyJSON
 import RxSwift
 
-typealias resp<T> = (_ data : ResponseModel<T>)->()
+public typealias resp<T> = (_ data : ResponseModel<T>)->()
 
-struct ResponseModel<T> : HandyJSON {
+public struct ResponseModel<T> : HandyJSON {
     var message = "网络出错"
     var data : T?
     var code : ModelCode = ModelCode.netBad
     var sysTime : TimeInterval = 0
     var realResp : Any?
-    
-    mutating func mapping(mapper: HelpingMapper) {
+    public init(){}
+    mutating public func mapping(mapper: HelpingMapper) {
         mapper <<<
             self.code <-- TransformOf<ModelCode, Int>(fromJSON: { (num) -> ModelCode? in
                 if let num = num {
@@ -44,7 +44,7 @@ struct ResponseModel<T> : HandyJSON {
     }
 }
 
-enum ModelCode: Int, HandyJSONEnum {
+public enum ModelCode: Int, HandyJSONEnum {
     case success = 0
     case netBad = -1
     case missionInvalid = 1
@@ -57,7 +57,7 @@ enum ModelCode: Int, HandyJSONEnum {
     }
 }
 
-enum ZMNetStatus {
+public enum ZMNetStatus {
     /**未知网络*/
     case unkown
     /**无网络*/
@@ -69,7 +69,7 @@ enum ZMNetStatus {
 }
 
 
-class ZMNetManager {
+open class ZMNetManager {
     static let shared = ZMNetManager()
     var apiprovider : ZMApiProvider?
     /**网络监听管理类*/
