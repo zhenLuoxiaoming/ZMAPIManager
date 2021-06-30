@@ -17,6 +17,8 @@ enum TestAPI{
 extension TestAPI : ZMApiProvider {
     func BaseUrl() -> String {
         print("test")
+        
+        print("sdfsdfds")
         return "https://m3.mindant.cn/icps"
     }
     
